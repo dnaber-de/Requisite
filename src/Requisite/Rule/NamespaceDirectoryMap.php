@@ -29,10 +29,12 @@ class NamespaceDirectoryMap implements AutoLoadRuleInterface {
 	 */
 	function __construct( $base_dir, $base_ns = '', Loader\FileLoaderInterface $file_loader = NULL ) {
 
-		$this->base_dir = (string) $base_dir;
+		// trim potential trailing slashes
+		$this->base_dir = rtrim( (string) $base_dir, '\\/' );
+
+		// always absolute namespaces with trailing slash
 		$base_ns  = trim( $base_ns, '\\ ' );
 		$base_ns = '\\' . $base_ns . '\\';
-
 		$this->base_ns = $base_ns;
 
 		if ( ! $file_loader )
