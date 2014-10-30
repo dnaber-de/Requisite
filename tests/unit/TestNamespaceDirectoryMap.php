@@ -5,26 +5,46 @@ use Requisite\Rule;
 
 class TestNamespaceDirectoryMap extends \PHPUnit_Framework_TestCase {
 
-	public function testLoadClass() {
+	/**
+	 * @dataProvider namespaceDirectoryProvider
+	 * @param string $base_ns
+	 * @param string $base_dir
+	 * @param string $class
+	 * @param string $expected_file
+	 */
+	public function testLoadClass( $base_ns, $base_dir, $class, $expected_file ) {
 
-		$base_namespace = 'Requisite\Test';
-		$base_dir       = __DIR__;
-		$class          = '\Requisite\Test\Model\SampleClass';
-		$file           = __DIR__ . '/Model/SampleClass.php';
 		$mock_loader    = $this->getMockBuilder(
 			'\Requisite\Loader\DefaultConditionalFileLoader'
 		)->getMock();
 		$mock_loader->expects( $this->any() )
 			->method( 'loadFile' )
 			->will(
-				$this->returnCallback( function( $f ) use( $file ) {
-					return $f === $file;
+				$this->returnCallback( function( $file ) use( $expected_file ) {
+					return $file === $expected_file;
 				} )
 			);
-		$testee = new Rule\NamespaceDirectoryMap( $base_dir, $base_namespace, $mock_loader );
+		$testee = new Rule\NamespaceDirectoryMap( $base_dir, $base_ns, $mock_loader );
 
 		$this->assertTrue(
 			$testee->loadClass( $class )
+		);
+	}
+
+	/**
+	 * dataProvider for TestNamespaceDirectoryMap::testLoadClass()
+	 *
+	 * @return array
+	 */
+	public function namespaceDirectoryProvider() {
+
+		return array(
+			array(
+				'Requisite\Test',                    // base namespace
+				__DIR__,                             // base dir
+				'\Requisite\Test\Model\SampleClass', // class to load
+				__DIR__ . '/Model/SampleClass.php'   // expected resolved filename
+			)
 		);
 	}
 }
