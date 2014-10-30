@@ -2,9 +2,10 @@
 
 
 namespace Requisite\Test\Unit;
+use \Requisite\Test\TestCase;
 use Requisite\Loader;
 
-class TestDirectoryCacheFileLoader extends \PHPUnit_Framework_TestCase {
+class TestDirectoryCacheFileLoader extends TestCase\BootstrapedTestCase {
 
 	/**
 	 * @type Loader\DirectoryCacheFileLoader
@@ -28,6 +29,7 @@ class TestDirectoryCacheFileLoader extends \PHPUnit_Framework_TestCase {
 
 	public function setUp() {
 
+		$this->maybeBootstrap();
 		$this->test_dir = dirname( __DIR__ ) . '/samples';
 		$this->extension = '.php';
 

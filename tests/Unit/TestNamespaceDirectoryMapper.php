@@ -1,9 +1,15 @@
 <?php
 
 namespace Requisite\Test\Unit;
+use \Requisite\Test\TestCase;
 use Requisite\Rule;
 
-class TestNamespaceDirectoryMapper extends \PHPUnit_Framework_TestCase {
+class TestNamespaceDirectoryMapper extends TestCase\BootstrapedTestCase {
+
+	public function setUp() {
+
+		$this->maybeBootstrap();
+	}
 
 	/**
 	 * @dataProvider namespaceDirectoryProvider

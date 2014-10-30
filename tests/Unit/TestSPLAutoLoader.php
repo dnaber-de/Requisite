@@ -4,9 +4,10 @@
  */
 
 namespace Requisite\Test\Unit;
+use \Requisite\Test\TestCase;
 use Requisite;
 
-class TestSPLAutoLoader extends \PHPUnit_Framework_TestCase {
+class TestSPLAutoLoader extends TestCase\BootstrapedTestCase {
 
 	/**
 	 * @type Requisite\SPLAutoLoader
@@ -18,6 +19,7 @@ class TestSPLAutoLoader extends \PHPUnit_Framework_TestCase {
 	 */
 	public function setUp() {
 
+		$this->maybeBootstrap();
 		$this->testee = new Requisite\SPLAutoLoader;
 	}
 

@@ -4,9 +4,10 @@
  */
 
 namespace Requisite\Test\Unit;
+use \Requisite\Test\TestCase;
 use \Requisite\Loader;
 
-class TestDefaultConditionalFileLoader extends \PHPUnit_Framework_TestCase {
+class TestDefaultConditionalFileLoader extends TestCase\BootstrapedTestCase {
 
 	/**
 	 * @type Loader\DefaultConditionalFileLoader
@@ -15,6 +16,7 @@ class TestDefaultConditionalFileLoader extends \PHPUnit_Framework_TestCase {
 
 	public function setUp() {
 
+		$this->maybeBootstrap();
 		$this->testee = new Loader\DefaultConditionalFileLoader;
 	}
 
