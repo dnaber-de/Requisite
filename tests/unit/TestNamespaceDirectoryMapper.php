@@ -79,6 +79,13 @@ class TestNamespaceDirectoryMapper extends \PHPUnit_Framework_TestCase {
 				'\Psr\Logger\LoggerInterface',
 				'', // will lead to an assertFalse() assertion
 			),
+			// try non matching namespace
+			array(
+				'\Foo\Bar\\',
+				'/var/www/php/',
+				'\Foo\Bazz',
+				'', // will lead to an assertFalse() assertion
+			)
 		);
 	}
 }
