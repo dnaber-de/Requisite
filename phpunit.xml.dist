@@ -7,8 +7,13 @@
 	convertWarningsToExceptions="true"
 	>
 	<testsuites>
-		<testsuite name="Requisite Unit Tests">
+		<!-- the order of the test-suites is important! -->
+		<testsuite name="BootstrapTests">
+			<file>./tests/Unit/TestRequisite.php</file>
+		</testsuite>
+		<testsuite name="LoaderTests">
 			<directory prefix="Test" suffix=".php">./tests/Unit/</directory>
+			<exclude>./tests/Unit/TestRequisite.php</exclude>
 		</testsuite>
 	</testsuites>
 </phpunit>
