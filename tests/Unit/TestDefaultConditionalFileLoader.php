@@ -22,7 +22,7 @@ class TestDefaultConditionalFileLoader extends TestCase\BootstrapedTestCase {
 
 	public function testLoadFile() {
 
-		$testfile = dirname( __DIR__ ) . '/samples/LoadMe.php';
+		$testfile = dirname( __DIR__ ) . '/Samples/LoadMe.php';
 
 		$this->assertTrue(
 			$this->testee->loadFile( $testfile )

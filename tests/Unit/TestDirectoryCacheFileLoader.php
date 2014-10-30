@@ -30,7 +30,7 @@ class TestDirectoryCacheFileLoader extends TestCase\BootstrapedTestCase {
 	public function setUp() {
 
 		$this->maybeBootstrap();
-		$this->test_dir = dirname( __DIR__ ) . '/samples';
+		$this->test_dir = dirname( __DIR__ ) . '/Samples';
 		$this->extension = '.php';
 
 		$this->testee = new Loader\DirectoryCacheFileLoader(
