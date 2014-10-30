@@ -33,8 +33,12 @@ class NamespaceDirectoryMapper implements AutoLoadRuleInterface {
 		$this->base_dir = rtrim( (string) $base_dir, '\\/' );
 
 		// always absolute namespaces with trailing slash
+		// trim slashes AND spaces
 		$base_ns  = trim( $base_ns, '\\ ' );
-		$base_ns = '\\' . $base_ns . '\\';
+		if ( ! empty( $base_ns ) )
+			$base_ns = '\\' . $base_ns . '\\';
+		else
+			$base_ns = '\\';
 		$this->base_ns = $base_ns;
 
 		if ( ! $file_loader )
@@ -53,7 +57,10 @@ class NamespaceDirectoryMapper implements AutoLoadRuleInterface {
 		if ( 0 !== strpos( $class, $this->base_ns ) )
 			return FALSE;
 
-		$class = str_replace( $this->base_ns, '', $class );
+		// strip the base namespace from the beginning of the class name
+		if ( $this->base_ns === substr( $class, 0, strlen( $this->base_ns ) ) )
+			$class = substr( $class, strlen( $this->base_ns ) );
+
 		$class = ltrim( $class, '\\' );
 		$class = str_replace( '\\', '/', $class );
 		$file = $this->base_dir . '/' . $class . '.php';
