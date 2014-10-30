@@ -5,7 +5,7 @@ $classes = array(
 	'Loader/DefaultConditionalFileLoader.php',
 	'Loader/DirectoryCacheFileLoader.php',
 	'Rule/AutoLoadRuleInterface.php',
-	'Rule/NamespaceDirectoryMap.php',
+	'Rule/NamespaceDirectoryMapper.php',
 	'AutoLoaderInterface.php',
 	'SPLAutoLoader.php'
 );

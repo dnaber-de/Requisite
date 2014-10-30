@@ -6,7 +6,7 @@
 namespace Requisite\Rule;
 use Requisite\Loader;
 
-class NamespaceDirectoryMap implements AutoLoadRuleInterface {
+class NamespaceDirectoryMapper implements AutoLoadRuleInterface {
 
 	/**
 	 * @type Loader\FileLoaderInterface
@@ -60,5 +60,4 @@ class NamespaceDirectoryMap implements AutoLoadRuleInterface {
 
 		return $this->file_loader->loadFile( $file );
 	}
-
 }

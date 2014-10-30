@@ -3,7 +3,7 @@
 namespace Requisite\Test\Unit;
 use Requisite\Rule;
 
-class TestNamespaceDirectoryMap extends \PHPUnit_Framework_TestCase {
+class TestNamespaceDirectoryMapper extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @dataProvider namespaceDirectoryProvider
@@ -24,7 +24,7 @@ class TestNamespaceDirectoryMap extends \PHPUnit_Framework_TestCase {
 					return $file === $expected_file;
 				} )
 			);
-		$testee = new Rule\NamespaceDirectoryMap( $base_dir, $base_ns, $mock_loader );
+		$testee = new Rule\NamespaceDirectoryMapper( $base_dir, $base_ns, $mock_loader );
 
 		if ( ! empty( $expected_file ) ) {
 			$this->assertTrue(
@@ -38,7 +38,7 @@ class TestNamespaceDirectoryMap extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * dataProvider for TestNamespaceDirectoryMap::testLoadClass()
+	 * dataProvider for TestNamespaceDirectoryMapper::testLoadClass()
 	 *
 	 * @return array
 	 */
@@ -82,4 +82,3 @@ class TestNamespaceDirectoryMap extends \PHPUnit_Framework_TestCase {
 		);
 	}
 }
- 
