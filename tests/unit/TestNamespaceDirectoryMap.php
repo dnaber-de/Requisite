@@ -11,15 +11,18 @@ class TestNamespaceDirectoryMap extends \PHPUnit_Framework_TestCase {
 		$base_dir       = __DIR__;
 		$class          = '\Requisite\Test\Model\SampleClass';
 		$file           = __DIR__ . '/Model/SampleClass.php';
-		$mock_loader = $this->getMock( '\Requisite\Loader\DefaultConditionalFileLoader' );
-		$mock_loader->expects( $this->once() )
-			->method( 'loadClass' )
-			->with( $this->equalTo( $file ) )
-			->willReturn( TRUE );
-
+		$mock_loader    = $this->getMockBuilder(
+			'\Requisite\Loader\DefaultConditionalFileLoader'
+		)->getMock();
+		$mock_loader->expects( $this->any() )
+			->method( 'loadFile' )
+			->will(
+				$this->returnCallback( function( $f ) use( $file ) {
+					return $f === $file;
+				} )
+			);
 		$testee = new Rule\NamespaceDirectoryMap( $base_dir, $base_namespace, $mock_loader );
 
-		//$this->markTestIncomplete( 'Todo' );
 		$this->assertTrue(
 			$testee->loadClass( $class )
 		);
