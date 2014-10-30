@@ -56,7 +56,7 @@ class NamespaceDirectoryMap implements AutoLoadRuleInterface {
 		$class = str_replace( '\\', '/', $class );
 		$file = $this->base_dir . '/' . $class . '.php';
 
-		return $this->file_loader->loadFile( $file . $file );
+		return $this->file_loader->loadFile( $file );
 	}
 
 }
