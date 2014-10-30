@@ -26,9 +26,15 @@ class TestNamespaceDirectoryMap extends \PHPUnit_Framework_TestCase {
 			);
 		$testee = new Rule\NamespaceDirectoryMap( $base_dir, $base_ns, $mock_loader );
 
-		$this->assertTrue(
-			$testee->loadClass( $class )
-		);
+		if ( ! empty( $expected_file ) ) {
+			$this->assertTrue(
+				$testee->loadClass( $class )
+			);
+		} else {
+			$this->assertFalse(
+				$testee->loadClass( $class )
+			);
+		}
 	}
 
 	/**
@@ -44,7 +50,35 @@ class TestNamespaceDirectoryMap extends \PHPUnit_Framework_TestCase {
 				__DIR__,                             // base dir
 				'\Requisite\Test\Model\SampleClass', // class to load
 				__DIR__ . '/Model/SampleClass.php'   // expected resolved filename
-			)
+			),
+			// try base pathes with trailing slash
+			array(
+				'Requisite\Test',
+				'/var/www/php/',
+				'\Requisite\Test\Model\SampleClass',
+				'/var/www/php/Model/SampleClass.php'
+			),
+			// try absolute namespace
+			array(
+				'\Requisite\Test',
+				'/var/www/php/',
+				'\Requisite\Test\Model\SampleClass',
+				'/var/www/php/Model/SampleClass.php'
+			),
+			// try global namespace
+			array(
+				'',
+				'/var/www/php',
+				'\Psr\Logger\LoggerInterface',
+				'/var/www/php/Psr/Logger/LoggerInterface.php'
+			),
+			// try non matching namespace
+			array(
+				'Symfony\Component',
+				'/var/www/php',
+				'\Psr\Logger\LoggerInterface',
+				'', // will lead to an assertFalse() assertion
+			),
 		);
 	}
 }
