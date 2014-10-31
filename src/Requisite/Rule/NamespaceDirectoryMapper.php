@@ -26,6 +26,7 @@ class NamespaceDirectoryMapper implements AutoLoadRuleInterface {
 	/**
 	 * @param string $base_dir
 	 * @param string $base_ns
+	 * @param Loader\FileLoaderInterface $file_loader $file_loader (Optional)
 	 */
 	function __construct( $base_dir, $base_ns = '', Loader\FileLoaderInterface $file_loader = NULL ) {
 
