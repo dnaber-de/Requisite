@@ -53,6 +53,10 @@ class NamespaceDirectoryMapper implements AutoLoadRuleInterface {
 	 */
 	public function loadClass( $class ) {
 
+		//make sure the class name is absolute
+		if ( 0 !== strpos( $class, '\\' ) )
+			$class = '\\' . $class;
+
 		// check if the namespace matches the class
 		if ( 0 !== strpos( $class, $this->base_ns ) )
 			return FALSE;
