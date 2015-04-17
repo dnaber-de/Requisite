@@ -1,7 +1,12 @@
-<?php
+<?php # -*- coding: utf-8 -*-
 
 namespace Requisite;
 
+/**
+ * Interface AutoLoaderInterface
+ *
+ * @package Requisite
+ */
 interface AutoLoaderInterface {
 
 	/**

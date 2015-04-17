@@ -2,7 +2,14 @@
 
 namespace Requisite;
 
-
+/**
+ * Class Requisite
+ *
+ * This class is just a static wrapper to load Requisite
+ * if it is not used with an auto loader itself.
+ *
+ * @package Requisite
+ */
 class Requisite {
 
 	/**
@@ -10,6 +17,9 @@ class Requisite {
 	 */
 	private static $is_loaded = FALSE;
 
+	/**
+	 * @param string $base_dir (Optional, default to __DIR__ which is normally src/Requisite)
+	 */
 	public static function init( $base_dir = '' ) {
 
 		if ( self::$is_loaded )
@@ -28,6 +38,9 @@ class Requisite {
 		self::$is_loaded = TRUE;
 	}
 
+	/**
+	 * @return array
+	 */
 	private static function get_classes() {
 
 		return array(

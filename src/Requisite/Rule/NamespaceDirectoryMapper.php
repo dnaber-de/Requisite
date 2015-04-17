@@ -1,11 +1,16 @@
-<?php
-/**
- * Mapping a namespace structure to a directory structure
- */
+<?php # -*- coding: utf-8 -*-
 
 namespace Requisite\Rule;
 use Requisite\Loader;
 
+/**
+ * Class NamespaceDirectoryMapper
+ *
+ * Mapping a namespace structure to a directory structure.
+ * Actually this is a PSR 4 behaviour.
+ *
+ * @package Requisite\Rule
+ */
 class NamespaceDirectoryMapper implements AutoLoadRuleInterface {
 
 	/**

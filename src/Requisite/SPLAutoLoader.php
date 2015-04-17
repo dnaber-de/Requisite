@@ -1,8 +1,12 @@
-<?php
+<?php # -*- coding: utf-8 -*-
 
 namespace Requisite;
 
-
+/**
+ * Class SPLAutoLoader
+ *
+ * @package Requisite
+ */
 class SPLAutoLoader implements AutoLoaderInterface {
 
 	/**

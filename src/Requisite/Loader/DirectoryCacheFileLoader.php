@@ -1,12 +1,15 @@
-<?php
-/**
- * reads in a whole directory at once to cache the existing files
- * to avoid frequently usage of file_exists() checks
- */
+<?php # -*- coding: utf-8 -*-
 
 namespace Requisite\Loader;
 
-
+/**
+ * Class DirectoryCacheFileLoader
+ *
+ * reads in a whole directory at once to cache the existing files
+ * to avoid frequently usage of file_exists() checks
+ *
+ * @package Requisite\Loader
+ */
 class DirectoryCacheFileLoader implements FileLoaderInterface {
 
 	/**
