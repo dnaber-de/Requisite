@@ -1,0 +1,24 @@
+{
+	"name": "dnaber/requisite",
+	"type": "library",
+	"description": "SPL Autoloader",
+	"keywords": [ "SPL","Autoload" ],
+	"homepage": "https://github.com/dnaber-de/Requisite",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "David Naber",
+			"email": "kontakt@dnaber.de",
+			"homepage": "http://dnaber.de",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Requisite\\": "src/"
+		}
+	}
+}
