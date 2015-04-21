@@ -1,7 +1,7 @@
 {
 	"name": "dnaber/requisite",
 	"type": "library",
-	"description": "SPL Autoloader",
+	"description": "A modular and extendable SPL Autoloader.",
 	"keywords": [ "SPL","Autoload" ],
 	"homepage": "https://github.com/dnaber-de/Requisite",
 	"license": "MIT",
