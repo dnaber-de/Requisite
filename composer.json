@@ -1,7 +1,7 @@
 {
 	"name": "dnaber/requisite",
 	"type": "library",
-	"description": "A modular and extendable SPL Autoloader.",
+	"description": "A modular, extensible PHP autoloader.",
 	"keywords": [ "SPL","Autoload" ],
 	"homepage": "https://github.com/dnaber-de/Requisite",
 	"license": "MIT",
@@ -9,7 +9,7 @@
 		{
 			"name": "David Naber",
 			"email": "kontakt@dnaber.de",
-			"homepage": "http://dnaber.de",
+			"homepage": "https://dnaber.de/",
 			"role": "Developer"
 		}
 	],
