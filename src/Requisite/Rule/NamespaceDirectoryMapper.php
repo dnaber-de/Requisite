@@ -1,7 +1,9 @@
 <?php # -*- coding: utf-8 -*-
 
 namespace Requisite\Rule;
-use Requisite\Loader;
+
+use
+	Requisite\Loader;
 
 /**
  * Class NamespaceDirectoryMapper
