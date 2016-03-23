@@ -1,9 +1,16 @@
-<?php
+<?php # -*- coding: utf-8 -*-
 
 namespace Requisite\Test\Unit;
-use \Requisite\Test\TestCase;
-use Requisite\Rule;
 
+use
+	Requisite\Test\TestCase,
+	Requisite\Rule;
+
+/**
+ * Class TestNamespaceDirectoryMapper
+ *
+ * @package Requisite\Test\Unit
+ */
 class TestNamespaceDirectoryMapper extends TestCase\BootstrapedTestCase {
 
 	public function setUp() {
@@ -20,27 +27,29 @@ class TestNamespaceDirectoryMapper extends TestCase\BootstrapedTestCase {
 	 */
 	public function testLoadClass( $base_ns, $base_dir, $class, $expected_file ) {
 
-		$mock_loader    = $this->getMockBuilder(
-			'\Requisite\Loader\DefaultConditionalFileLoader'
-		)->getMock();
-		$mock_loader->expects( $this->any() )
+		$mock_loader = $this
+			->getMockBuilder( '\Requisite\Loader\DefaultConditionalFileLoader' )
+			->getMock();
+		$loadFile_expectation = empty( $expected_file )
+			? $this->never()
+			: $this->atLeast( 1 );
+		$mock_loader->expects( $loadFile_expectation )
 			->method( 'loadFile' )
 			->will(
 				$this->returnCallback( function( $file ) use( $expected_file ) {
+					/**
+					 * the test will fail if FALSE is returned here
+					 */
 					return $file === $expected_file;
 				} )
 			);
 		$testee = new Rule\NamespaceDirectoryMapper( $base_dir, $base_ns, $mock_loader );
 
-		if ( ! empty( $expected_file ) ) {
-			$this->assertTrue(
-				$testee->loadClass( $class )
-			);
-		} else {
-			$this->assertFalse(
-				$testee->loadClass( $class )
-			);
-		}
+		// load class will return true, if the class could actually mapped
+		$this->assertSame(
+			! empty( $expected_file ),
+			$testee->loadClass( $class )
+		);
 	}
 
 	/**
@@ -83,14 +92,14 @@ class TestNamespaceDirectoryMapper extends TestCase\BootstrapedTestCase {
 				'Symfony\Component',
 				'/var/www/php',
 				'\Psr\Logger\LoggerInterface',
-				'', // will lead to an assertFalse() assertion
+				'', // means the rule cannot resolve the class name
 			),
 			// try non matching namespace
 			array(
 				'\Foo\Bar\\',
 				'/var/www/php/',
 				'\Foo\Bazz',
-				'', // will lead to an assertFalse() assertion
+				'', // means the rule cannot resolve the class name
 			)
 		);
 	}
