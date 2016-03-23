@@ -1,12 +1,16 @@
-<?php
-/**
- * Unit test for \Requisite\Loader\DefaultConditionalFileLoader
- */
+<?php # -*- coding: utf-8 -*-
 
 namespace Requisite\Test\Unit;
-use \Requisite\Test\TestCase;
-use \Requisite\Loader;
 
+use 
+	Requisite\Test\TestCase,
+	Requisite\Loader;
+
+/**
+ * Class TestDefaultConditionalFileLoader
+ *
+ * @package Requisite\Test\Unit
+ */
 class TestDefaultConditionalFileLoader extends TestCase\BootstrapedTestCase {
 
 	/**

@@ -1,11 +1,9 @@
-<?php
+<?php # -*- coding: utf-8 -*-
+
+namespace Requisite\Test\Example;
+
 /**
  * Just an empty class body for autoload testing
  */
 
-namespace Requisite\Test\Example;
-
-
-class FrontController {
-
-}
+class FrontController {}

@@ -1,10 +1,16 @@
-<?php
-
+<?php  # -*- coding: utf-8 -*-
 
 namespace Requisite\Test\Unit;
-use \Requisite\Test\TestCase;
-use Requisite\Loader;
 
+use
+	Requisite\Test\TestCase,
+	Requisite\Loader;
+
+/**
+ * Class TestDirectoryCacheFileLoader
+ *
+ * @package Requisite\Test\Unit
+ */
 class TestDirectoryCacheFileLoader extends TestCase\BootstrapedTestCase {
 
 	/**

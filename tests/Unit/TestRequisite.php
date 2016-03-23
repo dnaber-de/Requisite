@@ -1,10 +1,15 @@
 <?php # -*- coding: utf-8 -*-
 
-
 namespace Requisite\Test\Unit;
-use Requisite;
 
+use
+	Requisite;
 
+/**
+ * Class TestRequisite
+ *
+ * @package Requisite\Test\Unit
+ */
 class TestRequisite extends \PHPUnit_Framework_TestCase {
 
 	public static function setUpBeforeClass() {

@@ -1,9 +1,12 @@
 <?php # -*- coding: utf-8 -*-
 
-
 namespace Requisite\Test\TestCase;
 
-
+/**
+ * Class BootstrapedTestCase
+ *
+ * @package Requisite\Test\TestCase
+ */
 class BootstrapedTestCase extends \PHPUnit_Framework_TestCase {
 
 	private static $bootstraped = FALSE;

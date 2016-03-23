@@ -1,12 +1,16 @@
-<?php
-/**
- * Unit Test for the SPLAutoLoader class
- */
+<?php # -*- coding: utf-8 -*-
 
 namespace Requisite\Test\Unit;
-use \Requisite\Test\TestCase;
-use Requisite;
 
+use
+	Requisite\Test\TestCase,
+	Requisite;
+
+/**
+ * Class TestSPLAutoLoader
+ *
+ * @package Requisite\Test\Unit
+ */
 class TestSPLAutoLoader extends TestCase\BootstrapedTestCase {
 
 	/**
@@ -109,4 +113,3 @@ class TestSPLAutoLoader extends TestCase\BootstrapedTestCase {
 		$this->testee->unregister();
 	}
 }
- 
