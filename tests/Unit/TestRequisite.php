@@ -3,14 +3,15 @@
 namespace Requisite\Test\Unit;
 
 use
-	Requisite;
+	Requisite,
+	PHPUnit_Framework_TestCase;
 
 /**
  * Class TestRequisite
  *
  * @package Requisite\Test\Unit
  */
-class TestRequisite extends \PHPUnit_Framework_TestCase {
+class TestRequisite extends PHPUnit_Framework_TestCase {
 
 	public static function setUpBeforeClass() {
 
@@ -48,4 +49,3 @@ class TestRequisite extends \PHPUnit_Framework_TestCase {
 		}
 	}
 }
- 
