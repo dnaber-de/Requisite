@@ -26,7 +26,7 @@ class BootstrapedTestCase extends \PHPUnit_Framework_TestCase {
 				'Loader/DefaultConditionalFileLoader.php',
 				'Loader/DirectoryCacheFileLoader.php',
 				'Rule/AutoLoadRuleInterface.php',
-				'Rule/NamespaceDirectoryMapper.php',
+				'Rule/Psr4.php',
 				'AutoLoaderInterface.php',
 				'SPLAutoLoader.php'
 			);
@@ -36,4 +36,4 @@ class BootstrapedTestCase extends \PHPUnit_Framework_TestCase {
 			self::$bootstraped = TRUE;
 		}
 	}
-} 
+}

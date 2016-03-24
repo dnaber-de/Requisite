@@ -26,7 +26,7 @@ class TestRequisite extends PHPUnit_Framework_TestCase {
 			'Loader\DefaultConditionalFileLoader',
 			'Loader\DirectoryCacheFileLoader',
 			'Rule\AutoLoadRuleInterface',
-			'Rule\NamespaceDirectoryMapper',
+			'Rule\Psr4',
 			'AutoLoaderInterface',
 			'SPLAutoLoader'
 		);

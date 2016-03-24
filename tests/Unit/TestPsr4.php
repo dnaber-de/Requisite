@@ -35,7 +35,7 @@ class TestPsr4 extends TestCase\BootstrapedTestCase {
 			->with( $data[ 'file' ] )
 			->willReturn( TRUE );
 
-		$testee = new Rule\NamespaceDirectoryMapper(
+		$testee = new Rule\Psr4(
 			$data[ 'base_directory' ],
 			$data[ 'base_namespace' ],
 			$loader_mock

@@ -6,14 +6,14 @@ use
 	Requisite\Loader;
 
 /**
- * Class NamespaceDirectoryMapper
+ * Class Psr4
  *
- * Mapping a namespace structure to a directory structure.
- * Actually this is a PSR 4 behaviour.
+ * Mapping a namespace structure to a directory structure
+ * following the Psr4 standard
  *
  * @package Requisite\Rule
  */
-class NamespaceDirectoryMapper implements AutoLoadRuleInterface {
+class Psr4 implements AutoLoadRuleInterface {
 
 	/**
 	 * @type Loader\FileLoaderInterface
