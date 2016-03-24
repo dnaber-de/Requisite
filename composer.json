@@ -2,7 +2,7 @@
 	"name": "dnaber/requisite",
 	"type": "library",
 	"description": "A modular, extensible PHP autoloader.",
-	"keywords": [ "SPL","Autoload" ],
+	"keywords": [ "SPL", "Autoload", "Psr-4" ],
 	"homepage": "https://github.com/dnaber-de/Requisite",
 	"license": "MIT",
 	"authors": [
