@@ -13,16 +13,19 @@ One can register several rules on a main autoloader instance of `Requisite\SPLAu
 
 ```php
 
-// init Requisite
+/**
+ * Load the Requisite library. Alternatively you can use composer's
+ * autoloader via include vendor/autoload.php
+ */
 require_once 'src/Requisite/Requisite.php';
 Requisite\Requisite::init();
 
 $autoloader = new Requisite\SPLAutoLoader;
 //load the Monolog lib from the vendor/Monolog directory
 $autoloader->addRule(
-	new Requisite\Rule\NamespaeDirectoryMapper(
-		__DIR__ . '/vendor/Monolog',
-		'Monolog'
+	new Requisite\Rule\Psr4(
+		__DIR__ . '/vendor/Monolog', // base directory
+		'Monolog'                    // base namespace
 	)
 );
 ```
