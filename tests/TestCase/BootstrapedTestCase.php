@@ -27,6 +27,7 @@ class BootstrapedTestCase extends \PHPUnit_Framework_TestCase {
 				'Loader/DirectoryCacheFileLoader.php',
 				'Rule/AutoLoadRuleInterface.php',
 				'Rule/Psr4.php',
+				'Rule/NamespaceDirectoryMapper.php',
 				'AutoLoaderInterface.php',
 				'SPLAutoLoader.php'
 			);

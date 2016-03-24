@@ -59,6 +59,9 @@ class Requisite {
 			__NAMESPACE__ . '\Rule\Psr4'
 				=> '/Rule/Psr4.php',
 
+			__NAMESPACE__ . '\Rule\NamespaceDirectoryMapper'
+				=> '/Rule/NamespaceDirectoryMapper.php',
+
 			__NAMESPACE__ . '\AutoLoaderInterface'
 				=> '/AutoLoaderInterface.php',
 
