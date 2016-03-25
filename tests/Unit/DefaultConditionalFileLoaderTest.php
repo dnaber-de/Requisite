@@ -2,16 +2,16 @@
 
 namespace Requisite\Test\Unit;
 
-use 
+use
 	Requisite\Test\TestCase,
 	Requisite\Loader;
 
 /**
- * Class TestDefaultConditionalFileLoader
+ * Class DefaultConditionalFileLoaderTest
  *
  * @package Requisite\Test\Unit
  */
-class TestDefaultConditionalFileLoader extends TestCase\BootstrapedTestCase {
+class DefaultConditionalFileLoaderTest extends TestCase\BootstrapedTestCase {
 
 	/**
 	 * @type Loader\DefaultConditionalFileLoader
@@ -41,4 +41,3 @@ class TestDefaultConditionalFileLoader extends TestCase\BootstrapedTestCase {
 		unset( $this->testee );
 	}
 }
- 

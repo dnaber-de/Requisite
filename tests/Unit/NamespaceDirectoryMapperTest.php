@@ -7,11 +7,11 @@ use
 	Requisite\Rule;
 
 /**
- * Class TestNamespaceDirectoryMapper
+ * Class NamespaceDirectoryMapperTest
  *
  * @package Requisite\Test\Unit
  */
-class TestNamespaceDirectoryMapper extends TestCase\BootstrapedTestCase {
+class NamespaceDirectoryMapperTest extends TestCase\BootstrapedTestCase {
 
 	public function setUp() {
 
@@ -53,7 +53,7 @@ class TestNamespaceDirectoryMapper extends TestCase\BootstrapedTestCase {
 	}
 
 	/**
-	 * dataProvider for TestNamespaceDirectoryMapper::testLoadClass()
+	 * dataProvider for NamespaceDirectoryMapperTest::testLoadClass()
 	 *
 	 * @return array
 	 */

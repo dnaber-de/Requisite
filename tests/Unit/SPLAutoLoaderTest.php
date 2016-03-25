@@ -7,11 +7,11 @@ use
 	Requisite;
 
 /**
- * Class TestSPLAutoLoader
+ * Class SPLAutoLoaderTest
  *
  * @package Requisite\Test\Unit
  */
-class TestSPLAutoLoader extends TestCase\BootstrapedTestCase {
+class SPLAutoLoaderTest extends TestCase\BootstrapedTestCase {
 
 	/**
 	 * @type Requisite\SPLAutoLoader

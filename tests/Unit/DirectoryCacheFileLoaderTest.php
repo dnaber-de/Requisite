@@ -7,11 +7,11 @@ use
 	Requisite\Loader;
 
 /**
- * Class TestDirectoryCacheFileLoader
+ * Class DirectoryCacheFileLoaderTest
  *
  * @package Requisite\Test\Unit
  */
-class TestDirectoryCacheFileLoader extends TestCase\BootstrapedTestCase {
+class DirectoryCacheFileLoaderTest extends TestCase\BootstrapedTestCase {
 
 	/**
 	 * @type Loader\DirectoryCacheFileLoader
@@ -70,4 +70,3 @@ class TestDirectoryCacheFileLoader extends TestCase\BootstrapedTestCase {
 		unset( $this->testee );
 	}
 }
- 

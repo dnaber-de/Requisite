@@ -7,11 +7,14 @@ use
 	PHPUnit_Framework_TestCase;
 
 /**
- * Class TestRequisite
+ * Class RequisiteTest
+ *
+ * @runTestsInSeparateProcesses
+ * @preserveGlobalState disabled
  *
  * @package Requisite\Test\Unit
  */
-class TestRequisite extends PHPUnit_Framework_TestCase {
+class RequisiteTest extends PHPUnit_Framework_TestCase {
 
 	public static function setUpBeforeClass() {
 
@@ -44,7 +47,7 @@ class TestRequisite extends PHPUnit_Framework_TestCase {
 
 		foreach ( $classes as $class ) {
 			$this->assertTrue(
-				class_exists( $base_ns . $class ) ||  interface_exists( $base_ns . $class ),
+				class_exists( $base_ns . $class ) || interface_exists( $base_ns . $class ),
 				'Class/Interface: ' . $base_ns . $class
 			);
 		}

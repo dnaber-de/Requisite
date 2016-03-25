@@ -7,11 +7,11 @@ use
 	Requisite\Test\TestCase;
 
 /**
- * Class TestPsr4
+ * Class Psr4Test
  *
  * @package Requisite\Test\Unit
  */
-class TestPsr4 extends TestCase\BootstrapedTestCase {
+class Psr4Test extends TestCase\BootstrapedTestCase {
 
 	public function setUp() {
 
