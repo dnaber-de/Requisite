@@ -16,6 +16,7 @@ interface AutoLoadRule {
 
 	/**
 	 * @param string $class
+	 *
 	 * @return bool
 	 */
 	public function loadClass( $class );
