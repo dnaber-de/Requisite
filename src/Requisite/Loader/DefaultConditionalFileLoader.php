@@ -21,6 +21,7 @@ class DefaultConditionalFileLoader implements FileLoader {
 			return FALSE;
 
 		require_once $file;
+
 		return TRUE;
 	}
 

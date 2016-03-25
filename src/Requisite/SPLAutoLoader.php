@@ -40,8 +40,8 @@ class SPLAutoLoader implements AutoLoader {
 
 	/**
 	 * @param Rule\AutoLoadRule $rule
-	 * 
-*@return void
+	 *
+	 * @return void
 	 */
 	public function addRule( Rule\AutoLoadRule $rule ) {
 

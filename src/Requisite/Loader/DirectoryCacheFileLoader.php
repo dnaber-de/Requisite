@@ -53,6 +53,7 @@ class DirectoryCacheFileLoader implements FileLoader {
 			return FALSE;
 
 		require_once $file;
+
 		return TRUE;
 	}
 
