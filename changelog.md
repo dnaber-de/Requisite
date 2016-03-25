@@ -1,10 +1,11 @@
 # Requisite
 
 ## 2.0.0-development
+ * Drop PHP 5.3 support. At least PHP 5.5.0 is required
  * Rename `Requisite\AutoLoaderInterface` to `Requisite\AutoLoader`
  * Rename `Requisite\Loader\FileLoaderInterface` to `Requisite\Loader\FileLoader`
  * Rename `Requisite\Rule\AutoLoadRuleInterface` to `Requisite\Rule\AutoLoadRule`
-
+ * Introduce `Requisite\Rule\ClassMap`
 
 ## 1.0.0
  * Introducing `Rule\Psr4`
