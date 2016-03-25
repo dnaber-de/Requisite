@@ -3,13 +3,13 @@
 namespace Requisite\Loader;
 
 /**
- * Interface FileLoaderInterface
+ * Interface FileLoader
  *
  * Loads a given file, if exists.
  *
  * @package Requisite\Loader
  */
-interface FileLoaderInterface {
+interface FileLoader {
 
 	/**
 	 * @param string $file

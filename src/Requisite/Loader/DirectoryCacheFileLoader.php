@@ -10,7 +10,7 @@ namespace Requisite\Loader;
  *
  * @package Requisite\Loader
  */
-class DirectoryCacheFileLoader implements FileLoaderInterface {
+class DirectoryCacheFileLoader implements FileLoader {
 
 	/**
 	 * @type array
@@ -79,4 +79,4 @@ class DirectoryCacheFileLoader implements FileLoaderInterface {
 
 		return $files;
 	}
-} 
+}

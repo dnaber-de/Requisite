@@ -16,7 +16,7 @@ use
 class Psr4 implements AutoLoadRule {
 
 	/**
-	 * @type Loader\FileLoaderInterface
+	 * @type Loader\FileLoader
 	 */
 	private $file_loader;
 
@@ -33,9 +33,9 @@ class Psr4 implements AutoLoadRule {
 	/**
 	 * @param string $base_dir
 	 * @param string $base_ns
-	 * @param Loader\FileLoaderInterface $file_loader $file_loader (Optional)
+	 * @param Loader\FileLoader $file_loader $file_loader (Optional)
 	 */
-	function __construct( $base_dir, $base_ns = '', Loader\FileLoaderInterface $file_loader = NULL ) {
+	function __construct( $base_dir, $base_ns = '', Loader\FileLoader $file_loader = NULL ) {
 
 		// trim potential trailing slashes
 		$this->base_dir = rtrim( (string) $base_dir, '\\/' );

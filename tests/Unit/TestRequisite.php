@@ -22,7 +22,7 @@ class TestRequisite extends PHPUnit_Framework_TestCase {
 	public function test_init() {
 
 		$classes = array(
-			'Loader\FileLoaderInterface',
+			'Loader\FileLoader',
 			'Loader\DefaultConditionalFileLoader',
 			'Loader\DirectoryCacheFileLoader',
 			'Rule\AutoLoadRule',

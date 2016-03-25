@@ -44,8 +44,8 @@ class Requisite {
 	private static function get_classes() {
 
 		return array(
-			__NAMESPACE__ . '\Loader\FileLoaderInterface'
-				=> '/Loader/FileLoaderInterface.php',
+			__NAMESPACE__ . '\Loader\FileLoader'
+				=> '/Loader/FileLoader.php',
 
 			__NAMESPACE__ . '\Loader\DefaultConditionalFileLoader'
 				=> '/Loader/DefaultConditionalFileLoader.php',

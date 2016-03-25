@@ -22,7 +22,7 @@ class BootstrapedTestCase extends \PHPUnit_Framework_TestCase {
 
 		if ( ! self::$bootstraped ) {
 			$classes = array(
-				'Loader/FileLoaderInterface.php',
+				'Loader/FileLoader.php',
 				'Loader/DefaultConditionalFileLoader.php',
 				'Loader/DirectoryCacheFileLoader.php',
 				'Rule/AutoLoadRule.php',

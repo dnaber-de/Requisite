@@ -9,7 +9,7 @@ namespace Requisite\Loader;
  *
  * @package Requisite\Loader
  */
-class DefaultConditionalFileLoader implements FileLoaderInterface {
+class DefaultConditionalFileLoader implements FileLoader {
 
 	/**
 	 * @param string $file
@@ -24,4 +24,4 @@ class DefaultConditionalFileLoader implements FileLoaderInterface {
 		return TRUE;
 	}
 
-} 
+}
