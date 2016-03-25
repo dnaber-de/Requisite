@@ -33,7 +33,7 @@ class RequisiteTest extends PHPUnit_Framework_TestCase {
 			'Rule\ClassMap',
 			'Rule\NamespaceDirectoryMapper',
 			'AutoLoader',
-			'SPLAutoLoader'
+			'SplAutoLoader'
 		);
 		$base_dir = dirname( dirname( __DIR__ ) ) . '/src/Requisite';
 		$base_ns = '\Requisite\\';

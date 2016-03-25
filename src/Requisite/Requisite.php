@@ -68,8 +68,8 @@ class Requisite {
 			__NAMESPACE__ . '\AutoLoader'
 				=> '/AutoLoader.php',
 
-			__NAMESPACE__ . '\SPLAutoLoader'
-				=> '/SPLAutoLoader.php'
+			__NAMESPACE__ . '\SplAutoLoader'
+				=> '/SplAutoLoader.php'
 		);
 	}
 }

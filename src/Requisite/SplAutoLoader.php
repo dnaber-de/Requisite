@@ -3,11 +3,11 @@
 namespace Requisite;
 
 /**
- * Class SPLAutoLoader
+ * Class SplAutoLoader
  *
  * @package Requisite
  */
-class SPLAutoLoader implements AutoLoader {
+class SplAutoLoader implements AutoLoader {
 
 	/**
 	 * @type array

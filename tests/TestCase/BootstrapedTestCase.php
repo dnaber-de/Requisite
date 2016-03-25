@@ -38,7 +38,7 @@ class BootstrapedTestCase extends \PHPUnit_Framework_TestCase {
 				'Rule/ClassMap.php',
 				'Rule/NamespaceDirectoryMapper.php',
 				'AutoLoader.php',
-				'SPLAutoLoader.php'
+				'SplAutoLoader.php'
 			);
 			foreach ( $classes as $class ) {
 				require_once dirname( dirname( __DIR__ ) ) . '/src/Requisite/' . $class;

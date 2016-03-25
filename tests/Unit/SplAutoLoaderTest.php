@@ -7,14 +7,14 @@ use
 	Requisite;
 
 /**
- * Class SPLAutoLoaderTest
+ * Class SplAutoLoaderTest
  *
  * @package Requisite\Test\Unit
  */
-class SPLAutoLoaderTest extends TestCase\BootstrapedTestCase {
+class SplAutoLoaderTest extends TestCase\BootstrapedTestCase {
 
 	/**
-	 * @type Requisite\SPLAutoLoader
+	 * @type Requisite\SplAutoLoader
 	 */
 	private $testee;
 
@@ -24,7 +24,7 @@ class SPLAutoLoaderTest extends TestCase\BootstrapedTestCase {
 	public function setUp() {
 
 		$this->maybeBootstrap();
-		$this->testee = new Requisite\SPLAutoLoader;
+		$this->testee = new Requisite\SplAutoLoader;
 	}
 
 	/**
@@ -42,7 +42,7 @@ class SPLAutoLoaderTest extends TestCase\BootstrapedTestCase {
 	 */
 	public function testPrependConstructor() {
 
-		$testee = new Requisite\SPLAutoLoader( FALSE );
+		$testee = new Requisite\SplAutoLoader( FALSE );
 		$callbacks = spl_autoload_functions();
 		$callback = array_pop( $callbacks );
 		$this->checkCallback( $callback, $testee, 'load' );
@@ -58,7 +58,7 @@ class SPLAutoLoaderTest extends TestCase\BootstrapedTestCase {
 		$this->testee->unregister();
 		// bring up a second instance in the stack to be
 		// sure the instance-comparison is correct
-		$testee = new Requisite\SPLAutoLoader;
+		$testee = new Requisite\SplAutoLoader;
 		$this->checkNotExist( spl_autoload_functions(), $this->testee );
 
 		$testee->unregister();
@@ -69,10 +69,10 @@ class SPLAutoLoaderTest extends TestCase\BootstrapedTestCase {
 	 * check the spl stack for non-existing of the testee
 	 *
 	 * @param array $spl_stack
-	 * @param Requisite\SPLAutoLoader $testee,
+	 * @param Requisite\SplAutoLoader $testee,
 	 * @param string $class
 	 */
-	public function checkNotExist( $spl_stack, Requisite\SPLAutoLoader $testee = NULL, $class = '' ) {
+	public function checkNotExist( $spl_stack, Requisite\SplAutoLoader $testee = NULL, $class = '' ) {
 
 		foreach ( (array) $spl_stack as $callback ) {
 			if ( is_array( $callback ) && is_object( $callback[ 0 ] ) )
@@ -88,11 +88,11 @@ class SPLAutoLoaderTest extends TestCase\BootstrapedTestCase {
 	 * with the correct class and method
 	 *
 	 * @param array $callback
-	 * @param Requisite\SPLAutoLoader $testee
+	 * @param Requisite\SplAutoLoader $testee
 	 * @param string $method
 	 */
 
-	public function checkCallback( $callback, Requisite\SPLAutoLoader $testee, $method ) {
+	public function checkCallback( $callback, Requisite\SplAutoLoader $testee, $method ) {
 
 		$this->assertTrue(
 			is_array( $callback )

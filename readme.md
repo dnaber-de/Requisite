@@ -9,7 +9,7 @@ that still supports PHP `5.3.0`.
 The main idea behind this autoloader is the separation of the file locating (`Requisite\Rule`) and file loading
 (`Requisite\Loader`) process.
 
-One can register several rules on a main autoloader instance of `Requisite\SPLAutoloader`. The included rule
+One can register several rules on a main autoloader instance of `Requisite\SplAutoloader`. The included rule
 `Rule\NamespaceDiretoryMapper` matches namespaces to directory names (which actually implements Psr-4).
 
 ### Rules
@@ -32,7 +32,7 @@ Provides a static map of full qualified class names to file names.
 require_once 'src/Requisite/Requisite.php';
 Requisite\Requisite::init();
 
-$autoloader = new Requisite\SPLAutoLoader;
+$autoloader = new Requisite\SplAutoLoader;
 //load the Monolog lib from the vendor/Monolog directory
 $autoloader->addRule(
 	new Requisite\Rule\Psr4(

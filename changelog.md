@@ -6,6 +6,7 @@
  * Rename `Requisite\Loader\FileLoaderInterface` to `Requisite\Loader\FileLoader`
  * Rename `Requisite\Rule\AutoLoadRuleInterface` to `Requisite\Rule\AutoLoadRule`
  * Introduce `Requisite\Rule\ClassMap`
+ * Rename `Requisite\SPLAutoLoader` to `Requisite\SplAutoLoader`
 
 ## 1.0.0
  * Introducing `Rule\Psr4`
