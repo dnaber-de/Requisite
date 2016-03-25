@@ -57,6 +57,7 @@ class Psr4 implements AutoLoadRule {
 
 	/**
 	 * @param string $class
+	 *
 	 * @return bool
 	 */
 	public function loadClass( $class ) {

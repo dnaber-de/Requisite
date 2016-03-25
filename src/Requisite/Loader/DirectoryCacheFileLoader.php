@@ -39,6 +39,7 @@ class DirectoryCacheFileLoader implements FileLoader {
 
 	/**
 	 * @param string $file
+	 *
 	 * @return bool
 	 */
 	public function loadFile( $file ) {
@@ -65,6 +66,7 @@ class DirectoryCacheFileLoader implements FileLoader {
 	 *
 	 * @param $dir
 	 * @param $pattern
+	 *
 	 * @return array
 	 */
 	public function readDirRecursive( $dir, $pattern ) {

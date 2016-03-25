@@ -27,6 +27,7 @@ class SPLAutoLoader implements AutoLoader {
 
 	/**
 	 * @param string $class
+	 *
 	 * @return bool
 	 */
 	public function load( $class ) {

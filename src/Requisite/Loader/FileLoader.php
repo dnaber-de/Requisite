@@ -13,6 +13,7 @@ interface FileLoader {
 
 	/**
 	 * @param string $file
+	 *
 	 * @return bool
 	 */
 	public function loadFile( $file );
