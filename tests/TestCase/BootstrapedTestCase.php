@@ -28,7 +28,7 @@ class BootstrapedTestCase extends \PHPUnit_Framework_TestCase {
 				'Rule/AutoLoadRuleInterface.php',
 				'Rule/Psr4.php',
 				'Rule/NamespaceDirectoryMapper.php',
-				'AutoLoaderInterface.php',
+				'AutoLoader.php',
 				'SPLAutoLoader.php'
 			);
 			foreach ( $classes as $class ) {

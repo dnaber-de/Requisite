@@ -3,11 +3,11 @@
 namespace Requisite;
 
 /**
- * Interface AutoLoaderInterface
+ * Interface AutoLoader
  *
  * @package Requisite
  */
-interface AutoLoaderInterface {
+interface AutoLoader {
 
 	/**
 	 * @param Rule\AutoLoadRuleInterface $rule

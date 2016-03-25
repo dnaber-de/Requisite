@@ -62,8 +62,8 @@ class Requisite {
 			__NAMESPACE__ . '\Rule\NamespaceDirectoryMapper'
 				=> '/Rule/NamespaceDirectoryMapper.php',
 
-			__NAMESPACE__ . '\AutoLoaderInterface'
-				=> '/AutoLoaderInterface.php',
+			__NAMESPACE__ . '\AutoLoader'
+				=> '/AutoLoader.php',
 
 			__NAMESPACE__ . '\SPLAutoLoader'
 				=> '/SPLAutoLoader.php'

@@ -28,7 +28,7 @@ class TestRequisite extends PHPUnit_Framework_TestCase {
 			'Rule\AutoLoadRuleInterface',
 			'Rule\Psr4',
 			'Rule\NamespaceDirectoryMapper',
-			'AutoLoaderInterface',
+			'AutoLoader',
 			'SPLAutoLoader'
 		);
 		$base_dir = dirname( dirname( __DIR__ ) ) . '/src/Requisite';

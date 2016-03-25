@@ -7,7 +7,7 @@ namespace Requisite;
  *
  * @package Requisite
  */
-class SPLAutoLoader implements AutoLoaderInterface {
+class SPLAutoLoader implements AutoLoader {
 
 	/**
 	 * @type array
@@ -54,4 +54,4 @@ class SPLAutoLoader implements AutoLoaderInterface {
 
 		spl_autoload_unregister( array( $this, 'load' ) );
 	}
-} 
+}
