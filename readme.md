@@ -14,11 +14,11 @@ One can register several rules on a main autoloader instance of `Requisite\SplAu
 
 ### Rules
 
-**Psr4**  
+#### Psr4
 Maps namespaces to filesystem directories relative to a base directory and base namespace as
 described in [Psr-4](http://www.php-fig.org/psr/psr-4/).
 
-**ClassMap**  
+#### ClassMap
 Provides a static map of full qualified class names to file names.
 
 ## Usage examples
