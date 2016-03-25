@@ -30,6 +30,7 @@ class RequisiteTest extends PHPUnit_Framework_TestCase {
 			'Loader\DirectoryCacheFileLoader',
 			'Rule\AutoLoadRule',
 			'Rule\Psr4',
+			'Rule\ClassMap',
 			'Rule\NamespaceDirectoryMapper',
 			'AutoLoader',
 			'SPLAutoLoader'
