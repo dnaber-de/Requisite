@@ -10,8 +10,9 @@ namespace Requisite;
 interface AutoLoader {
 
 	/**
-	 * @param Rule\AutoLoadRuleInterface $rule
+	 * @param Rule\AutoLoadRule $rule
+	 *
 	 * @return void
 	 */
-	public function addRule( Rule\AutoLoadRuleInterface $rule );
+	public function addRule( Rule\AutoLoadRule $rule );
 }

@@ -10,4 +10,4 @@ namespace Requisite\Rule;
  * @deprecated 
  * @package Requisite\Rule
  */
-class NamespaceDirectoryMapper extends Psr4 implements AutoLoadRuleInterface {}
+class NamespaceDirectoryMapper extends Psr4 implements AutoLoadRule {}

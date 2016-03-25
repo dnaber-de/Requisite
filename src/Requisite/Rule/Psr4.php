@@ -13,7 +13,7 @@ use
  *
  * @package Requisite\Rule
  */
-class Psr4 implements AutoLoadRuleInterface {
+class Psr4 implements AutoLoadRule {
 
 	/**
 	 * @type Loader\FileLoaderInterface

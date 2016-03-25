@@ -53,8 +53,8 @@ class Requisite {
 			__NAMESPACE__ . '\Loader\DirectoryCacheFileLoader'
 				=> '/Loader/DirectoryCacheFileLoader.php',
 
-			__NAMESPACE__ . '\Rule\AutoLoadRuleInterface'
-				=> '/Rule/AutoLoadRuleInterface.php',
+			__NAMESPACE__ . '\Rule\AutoLoadRule'
+				=> '/Rule/AutoLoadRule.php',
 
 			__NAMESPACE__ . '\Rule\Psr4'
 				=> '/Rule/Psr4.php',

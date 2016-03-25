@@ -39,10 +39,11 @@ class SPLAutoLoader implements AutoLoader {
 	}
 
 	/**
-	 * @param Rule\AutoLoadRuleInterface $rule
-	 * @return void
+	 * @param Rule\AutoLoadRule $rule
+	 * 
+*@return void
 	 */
-	public function addRule( Rule\AutoLoadRuleInterface $rule ) {
+	public function addRule( Rule\AutoLoadRule $rule ) {
 
 		$this->rules[] = $rule;
 	}

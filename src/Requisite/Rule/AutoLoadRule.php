@@ -3,7 +3,7 @@
 namespace Requisite\Rule;
 
 /**
- * Interface AutoLoadRuleInterface
+ * Interface AutoLoadRule
  *
  * AutoLoad rules are responsible to locate concrete files by a given,
  * fully qualified class names and load this class, if exists.
@@ -12,11 +12,11 @@ namespace Requisite\Rule;
  *
  * @package Requisite\Rule
  */
-interface AutoLoadRuleInterface {
+interface AutoLoadRule {
 
 	/**
 	 * @param string $class
 	 * @return bool
 	 */
 	public function loadClass( $class );
-} 
+}
