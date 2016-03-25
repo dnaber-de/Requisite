@@ -24,7 +24,7 @@ class ClassMap implements AutoLoadRule {
 	private $loader;
 
 	/**
-	 * Class names must be provided as full-qualified class names (FQCN)
+	 * Class names must be provided as full qualified class names (FQCN)
 	 * without leading backslash. e.g. 'Requisite\Rule\ClassMap' => '/vendor/requisite/Rule/ClassName.php'
 	 *
 	 * @param array $class_map [ $FQCN => $file ]
