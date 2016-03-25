@@ -9,7 +9,15 @@ namespace Requisite\Test\TestCase;
  */
 class BootstrapedTestCase extends \PHPUnit_Framework_TestCase {
 
+	/**
+	 * @var bool
+	 */
 	private static $bootstraped = FALSE;
+
+	/**
+	 * @var string
+	 */
+	private static $testDir;
 
 	/**
 	 * this function is necessary to separate the
@@ -36,5 +44,17 @@ class BootstrapedTestCase extends \PHPUnit_Framework_TestCase {
 			}
 			self::$bootstraped = TRUE;
 		}
+	}
+
+	/**
+	 * @return string
+	 */
+	public static function testDir() {
+
+		if ( ! self::$testDir ) {
+			self::$testDir = dirname( __DIR__ );
+		}
+
+		return self::$testDir;
 	}
 }

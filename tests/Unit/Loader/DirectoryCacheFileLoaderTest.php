@@ -1,6 +1,6 @@
 <?php  # -*- coding: utf-8 -*-
 
-namespace Requisite\Test\Unit;
+namespace Requisite\Test\Unit\Loader;
 
 use
 	Requisite\Test\TestCase,
@@ -36,7 +36,7 @@ class DirectoryCacheFileLoaderTest extends TestCase\BootstrapedTestCase {
 	public function setUp() {
 
 		$this->maybeBootstrap();
-		$this->test_dir = dirname( __DIR__ ) . '/Samples';
+		$this->test_dir = self::testDir() . '/Samples';
 		$this->extension = '.php';
 
 		$this->testee = new Loader\DirectoryCacheFileLoader(

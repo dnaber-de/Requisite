@@ -1,6 +1,6 @@
 <?php # -*- coding: utf-8 -*-
 
-namespace Requisite\Test\Unit;
+namespace Requisite\Test\Unit\Loader;
 
 use
 	Requisite\Test\TestCase,
@@ -26,7 +26,7 @@ class DefaultConditionalFileLoaderTest extends TestCase\BootstrapedTestCase {
 
 	public function testLoadFile() {
 
-		$testfile = dirname( __DIR__ ) . '/Samples/LoadMe.php';
+		$testfile = self::testDir() . '/Samples/LoadMe.php';
 
 		$this->assertTrue(
 			$this->testee->loadFile( $testfile )

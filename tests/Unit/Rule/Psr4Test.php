@@ -1,6 +1,6 @@
 <?php # -*- coding: utf-8 -*-
 
-namespace Requisite\Test\Unit;
+namespace Requisite\Test\Unit\Rule;
 
 use
 	Requisite\Rule,
