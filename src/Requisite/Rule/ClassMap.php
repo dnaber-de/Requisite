@@ -24,7 +24,10 @@ class ClassMap implements AutoLoadRule {
 	private $loader;
 
 	/**
-	 * @param array $class_map ( $FQCN => $file )
+	 * Class names must be provided as full-qualified class names (FQCN)
+	 * without leading backslash. e.g. 'Requisite\Rule\ClassMap' => '/vendor/requisite/Rule/ClassName.php'
+	 *
+	 * @param array $class_map [ $FQCN => $file ]
 	 * @param Loader\FileLoader $loader (Optional)
 	 */
 	public function __construct( array $class_map, Loader\FileLoader $loader = NULL ) {
@@ -41,7 +44,7 @@ class ClassMap implements AutoLoadRule {
 	 * @return bool
 	 */
 	public function loadClass( $class ) {
-		
+
 		if ( ! isset( $this->class_map[ $class ] ) )
 			return FALSE;
 
