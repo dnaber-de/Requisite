@@ -1,6 +1,6 @@
 # Requisite – a modular, extensible PHP autoloader
 
-Inspired by [Tom Buttler](https://r.je/) and [Thomas Scholz](http://toscho.de).
+Inspired by [Tom Buttler](https://r.je/) and [Fuxia Scholz](http://toscho.de).
 
 This library requires PHP version `5.5.0`. If you're looking for older support, use the `1.0` release branch,
 that still supports PHP `5.3.0`.
